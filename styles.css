@@ -5,7 +5,7 @@
 
 
 body {
-    background-color: #ECF5FC;
+    background: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
     font-family: sitefont;
 }
 
@@ -13,7 +13,7 @@ body {
     justify-content: space-between;
     margin: 30px 150px;
     padding: 10px 16px; /*TOP BOTTOM === LEFT RIGHT*/
-    border: 1px solid #D6E2F5;
+    border: 1px solid hsl(217, 61%, 90%);
     
     background-color: #FCFDFF;
     border-radius: 20px;
@@ -61,24 +61,23 @@ body {
     margin-right: auto;
     font-weight: 700;
     font-size: 34px;
-    color: #091540;
+    color: hsl(227, 75%, 14%);
 }
 
 .button-ext {
-    color: #091540;
+    color: hsl(227, 75%, 14%);
     font-family: sitefont;
     border-radius: 999px;
     background-color: #ffffff;
     padding: 8px 23px;
-    box-shadow: 0px 2px 3px 0px #D9E5F4;
+
     font-weight: 400;
     font-size: 20px;    
-    /*Display props*/
     display: flex;
     justify-content: center; 
     align-items: center;
     cursor: pointer;
-
+    border: hsl(217, 61%, 90%) solid 1px;
 }
 
 
@@ -94,6 +93,36 @@ body {
     color: white;
 }
 
+.button-ext-top {
+    color: hsl(227, 75%, 14%);
+    font-family: sitefont;
+    border-radius: 999px;
+    background-color: #ffffff;
+    padding: 8px 23px;
+    box-shadow: 0px 2px 3px 0px #D9E5F4;
+    font-weight: 400;
+    font-size: 20px;    
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    cursor: pointer;
+
+    border: hsl(217, 61%, 90%) solid 1px;
+}
+
+
+.button-ext-top:active {
+    color: white;
+    background-color: #C7231A;
+    
+}
+
+.button-ext-top:hover {
+    transition: 0.3s;
+    background-color: #C7231A;
+    color: white;
+}
+
 
 .extension-items {
     display:grid;
@@ -103,23 +132,59 @@ body {
 }
 
 .extension-card {
-
+    background-color: #FCFDFF;
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0px 2px 3px 0px #D9E5F4;
 }
 
-.extension-card img {
-
+.toggles {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding-top: 20px;
 }
 
-.extension-card h3 {
-
+.toggle-switch-checkbox {
+    display: none;
 }
 
-.extension-card p {
-
+.toggle-switch-label {
+    display: block;
+    position: relative;
+    width: 50px;
+    height: 25px;
+    background-color: #ccc;
+    border-radius: 17px;
+    cursor: pointer;
+    transition: background-color 0.4s;
 }
 
 
 
+/* The sliding circle (the 'thumb') */
+.toggle-switch-label::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
+    top: 7.5px;
+    left: 8px;
+    transition: transform 0.4s, background-color 0.4s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Styles when the switch is ON */
+.toggle-switch-checkbox:checked + .toggle-switch-label {
+    background-color: #C7231A; /* A bright blue */
+}
+
+.toggle-switch-checkbox:checked + .toggle-switch-label::after {
+    transform: translateX(25px);
+}
 
 
 

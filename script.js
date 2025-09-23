@@ -13,13 +13,19 @@ document.addEventListener('DOMContentLoaded', () => {
         const extensionItemsDiv = document.querySelector('.extension-items');
 
         // Create HTML for each extension and join them together
-        const htmlContent = data.map(item => {
+        const htmlContent = data.map((item, index) => {
             return `
                 <div class="extension-card">
                     <img src="${item.logo}" alt="${item.name} logo">
                     <h3>${item.name}</h3>
                     <p>${item.description}</p>
-                    <button class="button-ext">${item.isActive ? 'Disable' : 'Enable'}</button>
+                    
+                    <div class="toggles">
+                        <div class="button-ext">Remove</div>
+                        <input type="checkbox" id="toggleSwitch-${index}" class="toggle-switch-checkbox" ${item.isActive ? 'checked' : ''}>
+                        <label for="toggleSwitch-${index}" class="toggle-switch-label"></label>
+                    </div>
+                
                 </div>
             `;
         }).join('');
