@@ -47,4 +47,24 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error('Error fetching or parsing JSON:', error);
             document.querySelector('.extension-items').innerHTML = '<p>Oh ohhh, data not loaded. Check the console for errors.</p>';
         });
+
+        //dark mode code
+        darkModeButton.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            const darkModeIcon = darkModeButton.querySelector('.darkMode-icon');
+
+            if (body.classList.contains('dark-mode')) {
+                //dark mode is on, show the sun
+                darkModeIcon.src = './assets/images/icon-sun.svg';
+                darkModeIcon.alt = 'switch to lightMode';
+            } else {
+                //dark mode is turned off, show the luna
+                darkModeIcon.src = './assets/images/icon-moon.svg';
+                darkModeIcon.alt = 'switch to darkMode';
+
+            }
+            });
+
+
+
 });
