@@ -71,15 +71,12 @@ body {
     background-color: #ffffff;
     padding: 8px 23px;
     box-shadow: 0px 2px 3px 0px #D9E5F4;
-    
     font-weight: 400;
-    font-size: 20px;
-    
+    font-size: 20px;    
     /*Display props*/
     display: flex;
     justify-content: center; 
     align-items: center;
-
     cursor: pointer;
 
 }
@@ -88,6 +85,37 @@ body {
 .button-ext:active {
     color: white;
     background-color: #C7231A;
+    
+}
+
+.button-ext:hover {
+    transition: 0.3s;
+    background-color: #C7231A;
+    color: white;
+}
+
+
+.extension-items {
+    display:grid;
+    gap: 30px;
+    margin: 30px 150px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.extension-card {
+
+}
+
+.extension-card img {
+
+}
+
+.extension-card h3 {
+
+}
+
+.extension-card p {
+
 }
 
 
