@@ -134,6 +134,12 @@ body {
     color: white;
 }
 
+.active-filter {
+    transition: 0.3s;
+    background-color: #C7231A;
+    color: white;
+}
+
 
 .extension-items {
     display:grid;
@@ -281,6 +287,13 @@ body.dark-mode .button-ext-top:hover {
     color: white;
     border-color: hsl(3, 71%, 56%);
 }
+
+body.dark-mode .active-filter {
+    background-color: hsl(3, 71%, 56%); /* Red 500 */
+    color: white;
+    border-color: hsl(3, 71%, 56%);
+}
+
 
 
 body.dark-mode .attribution a {
