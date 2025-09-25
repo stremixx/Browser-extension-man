@@ -66,6 +66,7 @@ body {
     font-weight: 700;
     font-size: 34px;
     color: hsl(227, 75%, 14%);
+    transition: color 0.8s;
 }
 
 .button-ext {
@@ -82,6 +83,7 @@ body {
     align-items: center;
     cursor: pointer;
     border: hsl(217, 61%, 90%) solid 1px;
+    
 }
 
 
@@ -111,6 +113,10 @@ body {
     align-items: center;
     cursor: pointer;
 
+
+    transition: color 0.8s;
+    
+
     border: hsl(217, 61%, 90%) solid 1px;
 }
 
@@ -118,6 +124,7 @@ body {
 .button-ext-top:active {
     color: white;
     background-color: #C7231A;
+    
     
 }
 
@@ -218,7 +225,10 @@ body.dark-mode .topBar {
     color: hsl(0, 0%, 93%);
 }
 
+ .remove-button {
+    transition: color 0.8s;
 
+ }
 
 /*Change the colors of the logos*/
 body.dark-mode .logo {
