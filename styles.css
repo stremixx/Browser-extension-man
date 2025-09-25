@@ -206,6 +206,15 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
+/* Hover state for the OFF switch */
+.toggle-switch-label:hover {
+    background-color: #b3b3b3;
+}
+
+/* Hover state for the ON switch */
+.toggle-switch-checkbox:checked + .toggle-switch-label:hover {
+    background-color: hsl(3, 71%, 56%);
+}
 /* Styles when the switch is ON */
 .toggle-switch-checkbox:checked + .toggle-switch-label {
     background-color: #C7231A; /* A bright blue */
